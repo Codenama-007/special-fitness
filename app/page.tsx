@@ -11,7 +11,7 @@ import Footer from '@/components/FooterSection'
 
 const page = () => {
   return (
-    <div>
+    <div className='min-h-screen flex flex-col items-center justify-between overflow-x-hidden'>
       <Navbar/>
       <HeroSection      
       title="TRANSFORM YOUR BODY. TRANSFORM YOUR LIFE."

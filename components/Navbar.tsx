@@ -67,25 +67,43 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
+      {/*
+        FIX: This wrapper used to animate with `max-h-0` -> `max-h-96` (a hardcoded
+        384px) combined with `overflow-hidden`. The actual content (7 links + a
+        button, with py-6 padding and space-y-5 gaps) needs MORE than 384px on
+        most phones, so the old max-height silently clipped the bottom of the
+        menu — the "Join Now" button (and sometimes "Contact") was cut off /
+        invisible when the menu opened on mobile.
+
+        Fix: animate `grid-template-rows` from 0fr -> 1fr instead of a fixed
+        pixel max-height. A "1fr" row always sizes itself to fit its content,
+        so the menu expands to whatever height it actually needs — no more
+        guessing a max-h-* value, and no clipping even if more links are added
+        later. `overflow-hidden` is moved to the inner wrapper so the grid-row
+        animation still looks smooth (a 0fr row has 0 rendered height, so
+        content is hidden until it expands).
+      */}
       <div
-        className={`overflow-hidden transition-all duration-300 lg:hidden ${
-          open ? "max-h-96" : "max-h-0"
+        className={`grid transition-all duration-300 lg:hidden ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="space-y-5 border-t border-white/10 bg-black px-6 py-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block text-white transition hover:text-orange-500"
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="overflow-hidden">
+          <div className="space-y-5 border-t border-white/10 bg-black px-6 py-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block text-white transition hover:text-orange-500"
+              >
+                {link.name}
+              </a>
+            ))}
 
-          <button className="w-full rounded-full bg-orange-500 py-3 font-semibold text-white hover:bg-orange-600">
-            Join Now
-          </button>
+            <button className="w-full rounded-full bg-orange-500 py-3 font-semibold text-white hover:bg-orange-600">
+              Join Now
+            </button>
+          </div>
         </div>
       </div>
     </header>
