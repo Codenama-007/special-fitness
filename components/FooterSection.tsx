@@ -2,7 +2,7 @@ import Image from "next/image";
 import {
   Phone,
   CameraIcon,
-  BirdIcon ,
+  BirdIcon,
   MapIcon
 } from "lucide-react";
 
@@ -162,40 +162,44 @@ export default function Footer() {
         </div>
 
         {/* Address */}
-
-        <div
-          className="
-            mt-10
-            rounded-2xl
-            border
-            border-white/10
-            bg-[#111111]
-            p-6
-            flex
-            items-center
-            gap-5
-          "
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=SP+Fitness,+2nd+Floor,+Makwana+Complex,+Siddhivinayak+Arcade,+Shop+No+203,+Building+No+4,+Veer+Savarkar+Marg,+Vasai-Virar,+Maharashtra+401305"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
         >
+          <div
+            className="
+      mt-10
+      rounded-2xl
+      border
+      border-white/10
+      bg-[#111111]
+      p-6
+      flex
+      items-center
+      gap-5
+      hover:border-orange-500/50
+      transition-colors
+      cursor-pointer
+    "
+          >
+            <MapIcon
+              className="text-orange-500 shrink-0"
+              size={28}
+            />
 
-          <MapIcon
-            className="text-orange-500"
-            size={28}
-          />
+            <div>
+              <p className="text-sm text-gray-400">
+                Visit Us
+              </p>
 
-          <div>
-
-            <p className="text-sm text-gray-400">
-              Visit Us
-            </p>
-
-            <h3 className="font-semibold">
-              Sp Fitness, 2nd Floor, Makwana Complex, Siddhivinayak Arcade, Shop no 203 Building No 4, Veer Savarkar Marg, Vasai-Virar, Maharashtra 401305
-            </h3>
-
+              <h3 className="font-semibold">
+                Virar East - 401305, Maharashtra, India
+              </h3>
+            </div>
           </div>
-
-        </div>
-
+        </a>
       </div>
 
       {/* Bottom */}
