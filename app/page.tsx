@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
@@ -19,7 +20,7 @@ const page = () => {
           subtitle="Join Special Fitness and train with certified coaches, modern equipment, personalized workout plans, and a motivating community."
           image='/images/Banner.jpg'
           buttonText="Join Now"
-          buttonLink="/membership"
+          buttonLink="/register"
         />
         <Experience />
         <Programs />
