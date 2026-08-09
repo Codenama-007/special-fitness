@@ -2,11 +2,40 @@
 
 import React from "react";
 import { useState } from "react";
+import { registerlead } from "../actions/registerlead";
 
 const Page = () => {
   const [Fullname, setFullname] = useState("")
   const [Email, setEmail] = useState("")
   const [PhoneNo, setPhoneNo] = useState("")
+
+
+  // handling Form submits
+  const handle_submit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const gym_owner_number = process.env.NEXT_PUBLIC_GYM_OWNER_NUMBER!
+
+
+    const message = `
+🏋️ NEW MEMBERSHIP ENQUIRY
+
+Name: ${Fullname}
+Email: ${Email}
+Phone: ${PhoneNo}
+
+A customer is interested in joining Special Fitness.
+  `.trim();
+  
+  const whatsapp_url = `https://wa.me/${gym_owner_number}?text=${encodeURIComponent(
+    message
+  )}`;
+
+  window.open(whatsapp_url , "_blank")
+
+  }
+
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#090909] px-4">
@@ -19,7 +48,6 @@ const Page = () => {
           border border-white/10
           bg-[#111111]
           p-8
-          shadow-2xl
         "
       >
 
@@ -43,7 +71,7 @@ const Page = () => {
 
 
         {/* Form */}
-        <form className="flex flex-col gap-5">
+        <form className="flex flex-col gap-5" onSubmit={handle_submit}>
 
           {/* Name */}
           <div className="flex flex-col gap-2">
@@ -56,47 +84,13 @@ const Page = () => {
             </label>
 
             <input
-            required
+              value={Fullname}
+              onChange={(e) => { setFullname(e.target.value) }}
+              required
               type="text"
               name="name"
               id="name"
               placeholder="Enter your name"
-              className="
-                w-full
-                rounded-lg
-                border border-white/10
-                bg-[#090909]
-                px-4 py-3
-                font-inter
-                text-white
-                placeholder:text-gray-600
-                outline-none
-                transition
-                focus:border-orange-500
-                focus:ring-1
-                focus:ring-orange-500/40
-              "
-            />
-
-          </div>
-
-
-          {/* Email */}
-          <div className="flex flex-col gap-2">
-
-            <label
-              htmlFor="email"
-              className="font-inter text-xs font-semibold uppercase tracking-[0.2em] text-gray-400"
-            >
-              Email
-            </label>
-
-            <input
-            required
-              type="email"
-              name="email"
-              id="email"
-              placeholder="you@example.com"
               className="
                 w-full
                 rounded-lg
@@ -128,7 +122,10 @@ const Page = () => {
             </label>
 
             <input
-            required
+              value={PhoneNo}
+              onChange={(e) => { setPhoneNo(e.target.value) }}
+              required
+              maxLength={10}
               type="tel"
               name="phone"
               id="phone"
@@ -151,6 +148,46 @@ const Page = () => {
             />
 
           </div>
+
+          {/* Email */}
+          <div className="flex flex-col gap-2">
+
+            <label
+              htmlFor="email"
+              className="font-inter text-xs font-semibold uppercase tracking-[0.2em] text-gray-400"
+            >
+              Email
+            </label>
+
+            <input
+              required
+              value={Email}
+              onChange={(e) => { setEmail(e.target.value) }}
+              type="email"
+              name="email"
+              id="email"
+              placeholder="you@example.com"
+              className="
+                w-full
+                rounded-lg
+                border border-white/10
+                bg-[#090909]
+                px-4 py-3
+                font-inter
+                text-white
+                placeholder:text-gray-600
+                outline-none
+                transition
+                focus:border-orange-500
+                focus:ring-1
+                focus:ring-orange-500/40
+              "
+            />
+
+          </div>
+
+
+
 
 
           {/* Submit */}
@@ -176,7 +213,7 @@ const Page = () => {
               hover:shadow-orange-500/20
               active:scale-[0.98]
             "
-            
+
           >
             Start My Transformation →
           </button>
