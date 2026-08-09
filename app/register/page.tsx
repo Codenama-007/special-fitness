@@ -16,6 +16,8 @@ const Page = () => {
 
     const gym_owner_number = process.env.NEXT_PUBLIC_GYM_OWNER_NUMBER!
 
+    console.log(gym_owner_number)
+
 
     const message = `
 🏋️ NEW MEMBERSHIP ENQUIRY
@@ -58,7 +60,7 @@ A customer is interested in joining Special Fitness.
             Special Fitness
           </p>
 
-          <h1 className="mt-3 font-oswald text-4xl uppercase tracking-wide text-white">
+          <h1 className="mt-3 font-oswald text-3xl sm:text-4xl uppercase tracking-wide text-white wrap-break-word">
             Start Your Transformation
           </h1>
 
