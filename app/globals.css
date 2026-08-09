@@ -89,3 +89,13 @@
     text-decoration: none;
   }
 }
+
+
+/* adding shadow to the background */
+#join-now{
+  box-shadow: 0px 0px 20px 3px #964303;
+}
+
+#input-data{
+  box-shadow: 3px 3px 3px 3px white;
+}
