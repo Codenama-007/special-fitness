@@ -25,7 +25,7 @@ const products = [
     brand: "GAT Sport",
     href: "#",
     imageSrc: "/products/preworkout.png",
-    imageAlt: "Pre Workout",
+    imageAlt: "Nitraflex Pre Workout",
     price: "Starting ₹1,499",
   },
   {
@@ -34,7 +34,7 @@ const products = [
     brand: "Kevin Levrone",
     href: "#",
     imageSrc: "/images/C_MassGain_1.jpg",
-    imageAlt: "Mass Gainer",
+    imageAlt: "Anabolic Mass Gainer",
     price: "Starting ₹2,499",
   },
 ];
@@ -42,62 +42,44 @@ const products = [
 export default function Products() {
   return (
     <section
-      id="supplements"
-      className="bg-[#090909] text-white py-24 p-4"
+      id="products"
+      className="bg-[#090909] text-white"
     >
-      <div className="mx-auto max-w-7xl px-5">
+      <div className="container mx-auto px-5 py-24">
 
         {/* Heading */}
-
         <div className="text-center mb-16">
-
-          <span className="text-orange-500 uppercase tracking-[0.3em] text-sm">
+          <span className="text-orange-500 uppercase tracking-[0.3em] text-sm font-medium">
             Nutrition Partners
           </span>
 
-          <h2 className="mt-4 font-oswald text-5xl md:text-7xl uppercase">
+          <h2 className="mt-4 font-oswald text-5xl md:text-7xl uppercase tracking-wide">
             Fuel Your Transformation
           </h2>
 
-          <p className="mt-6 max-w-2xl mx-auto text-gray-400 text-lg">
+          <p className="mt-6 max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
             Build muscle, recover faster, and perform at your peak with
             premium supplements from trusted brands.
           </p>
-
         </div>
 
         {/* Products */}
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
 
           {products.map((product) => (
-
             <div
               key={product.id}
-              className="
-                group
-                rounded-2xl
-                overflow-hidden
-                bg-[#111111]
-                border
-                border-white/10
-                hover:border-orange-500/50
-                transition-all
-                duration-300
-                hover:-translate-y-2
-              "
+              className="group relative"
             >
 
-              <div className="overflow-hidden">
-
+              {/* Product Image */}
+              <div className="relative h-72 w-full overflow-hidden rounded-xl bg-[#111111] border border-white/10">
                 <Image
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  width={500}
-                  height={500}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="
-                    aspect-square
-                    w-full
                     object-cover
                     transition-transform
                     duration-500
@@ -105,32 +87,55 @@ export default function Products() {
                   "
                 />
 
+                {/* Hover Overlay */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-black/0
+                    group-hover:bg-black/20
+                    transition
+                    duration-300
+                  "
+                />
               </div>
 
-              <div className="p-5">
+              {/* Product Details */}
+              <div className="mt-5">
 
-                <p className="text-sm text-orange-500">
+                {/* Brand */}
+                <p className="text-orange-500 text-xs uppercase tracking-[0.2em] font-medium">
                   {product.brand}
                 </p>
 
-                <h3 className="mt-2 text-xl font-semibold text-white">
+                {/* Product Name */}
+                <h3 className="mt-2 text-lg font-semibold text-white">
                   {product.name}
                 </h3>
 
-                <div className="mt-4 flex items-center justify-between">
+                {/* Price + CTA */}
+                <div className="mt-3 flex items-center justify-between gap-4">
 
-                  <span className="text-lg font-bold text-white">
+                  <p className="text-gray-300 text-sm">
                     {product.price}
+                  </p>
+
+                  <span
+                    className="
+                      text-orange-500
+                      text-sm
+                      font-semibold
+                      whitespace-nowrap
+                    "
+                  >
+                    Sign In to Buy
                   </span>
 
-                  
-
                 </div>
-                <span className="text-orange-500">Sign In to buy Now</span>
+
               </div>
 
             </div>
-
           ))}
 
         </div>
@@ -139,3 +144,4 @@ export default function Products() {
     </section>
   );
 }
+
