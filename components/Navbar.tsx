@@ -43,7 +43,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="/" className="text-2xl font-bold text-white">
-          Special<span className="text-orange-500">Fitness</span>
+          SP<span className="text-orange-500">Fitness</span>
         </a>
 
         {/* Desktop Navigation */}
