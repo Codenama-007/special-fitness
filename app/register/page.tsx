@@ -61,7 +61,7 @@ A customer is interested in joining Special Fitness.
           </p>
 
           <h1 className="mt-3 font-oswald text-3xl sm:text-4xl uppercase tracking-wide text-white wrap-break-word">
-            Start Your Transformation
+            Make Your Move
           </h1>
 
           <p className="mt-3 font-inter text-sm leading-relaxed text-gray-400">
