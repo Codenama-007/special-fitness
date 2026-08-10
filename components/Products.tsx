@@ -53,7 +53,7 @@ export default function Products() {
             Nutrition Partners
           </span>
 
-          <h2 className="mt-4 font-oswald text-5xl md:text-7xl uppercase tracking-wide">
+          <h2 className="mt-4 font-oswald text-5xl md:text-7xl uppercase tracking-wide text-center">
             Fuel Your Transformation
           </h2>
 
