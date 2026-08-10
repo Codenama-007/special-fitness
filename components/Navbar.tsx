@@ -6,9 +6,7 @@ import { useLenis } from "lenis/react";
 import Link from "next/link";
 
 export default function Navbar() {
-  const handle_join = () => {
-    console.log(" Join button was clicked ")
-  }
+
   const [open, setOpen] = useState(false);
   const lenis = useLenis(); // grab the shared Lenis instance from SmoothScroll
 

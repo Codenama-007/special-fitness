@@ -54,7 +54,7 @@ export default function Products() {
           </span>
 
           <h2 className="mt-4 font-oswald text-5xl md:text-7xl uppercase tracking-wide text-center">
-            Fuel Your Transformation
+            Power Your Progress
           </h2>
 
           <p className="mt-6 max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">

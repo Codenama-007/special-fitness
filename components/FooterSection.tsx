@@ -72,7 +72,7 @@ export default function Footer() {
               </p>
 
               <h3 className="font-semibold text-lg">
-                +91 98765 43210
+                +91 78209 86147
               </h3>
 
             </div>
