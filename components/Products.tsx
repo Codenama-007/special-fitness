@@ -43,7 +43,7 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="bg-[#090909] text-white"
+      className="bg-[#090909] text-white min-h-screen p-4 max-w-full"
     >
       <div className="container mx-auto px-5 py-24">
 
