@@ -42,7 +42,7 @@ const products = [
 export default function Products() {
   return (
     <section
-      id="products"
+      id="supplements"
       className="bg-[#090909] text-white min-h-screen p-4 max-w-full"
     >
       <div className="container mx-auto px-5 py-24">
@@ -119,18 +119,6 @@ export default function Products() {
                   <p className="text-gray-300 text-sm">
                     {product.price}
                   </p>
-
-                  <span
-                    className="
-                      text-orange-500
-                      text-sm
-                      font-semibold
-                      whitespace-nowrap
-                    "
-                  >
-                    Sign In to Buy
-                  </span>
-
                 </div>
 
               </div>
