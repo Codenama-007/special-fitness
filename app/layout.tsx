@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Special Fitness | Premium training, real results",
   description:
     "Special Fitness delivers premium coaching, strength programming, and a focused training environment for ambitious members.",
+    verification : {
+      google : "1QY909zXbWm-Y7tFOQaPMs4vTCBaZyUrsN4C8t3s9HU"
+    }
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

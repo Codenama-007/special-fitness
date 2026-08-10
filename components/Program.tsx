@@ -4,6 +4,7 @@ import {
   HeartPulse,
   Trophy,
 } from "lucide-react";
+import Link from "next/link";
 
 
 const programs = [
@@ -218,7 +219,8 @@ export default function Programs() {
           "
         >
 
-          <button
+          <Link href = {'/register'}>
+                      <button
             className="
             px-8
             py-3
@@ -233,6 +235,8 @@ export default function Programs() {
           >
             Start Your Transformation
           </button>
+          </Link>
+          
 
         </div>
 
@@ -242,3 +246,6 @@ export default function Programs() {
     </section>
   );
 }
+
+
+{/* <meta name="google-site-verification" content="" /> */}
