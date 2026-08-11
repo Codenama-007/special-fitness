@@ -27,7 +27,7 @@ export default function Footer() {
           />
 
           <h2 className="mt-5 font-oswald text-4xl uppercase tracking-wide">
-            Special Fitness
+            SP Fitness
           </h2>
 
           <p className="mt-3 text-gray-400 max-w-md text-center">
