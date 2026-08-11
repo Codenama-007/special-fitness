@@ -17,7 +17,7 @@ const page = () => {
         <Navbar />
         <HeroSection
           title="TRANSFORM YOUR BODY. TRANSFORM YOUR LIFE."
-          subtitle="Join Special Fitness and train with certified coaches, modern equipment, personalized workout plans, and a motivating community."
+          subtitle="Join SP Fitness and train with certified coaches, modern equipment, personalized workout plans, and a motivating community."
           image='/images/Banner.jpg'
           buttonText="Join Now"
           buttonLink="/register"
