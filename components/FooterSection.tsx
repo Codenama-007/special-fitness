@@ -19,10 +19,10 @@ export default function Footer() {
         <div className="flex flex-col items-center">
 
           <Image
-            src="/logo.png"
+            src="/images/logo_1.png"
             alt="Special Fitness"
-            width={110}
-            height={110}
+            width={140}
+            height={140}
             className="object-contain"
           />
 

@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Special Fitness | Premium training, real results",
+  title: "SP Fitness | Premium training, real results",
   description:
-    "Special Fitness delivers premium coaching, strength programming, and a focused training environment for ambitious members.",
+    "SP Fitness delivers premium coaching, strength programming, and a focused training environment for ambitious members.",
     verification : {
       google : "1QY909zXbWm-Y7tFOQaPMs4vTCBaZyUrsN4C8t3s9HU"
     }
