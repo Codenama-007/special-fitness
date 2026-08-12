@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Phone */}
 
           <a
-            href="tel:+919876543210"
+            href="tel:+917820986147"
             className="
               group
               rounded-2xl
@@ -82,7 +82,7 @@ export default function Footer() {
           {/* Instagram */}
 
           <a
-            href="https://instagram.com/specialfitness"
+            href="https://instagram.com/_sp_fitness_1986?igsh=MTl0ZzBjMnBuMnhpw=="
             target="_blank"
             rel="noopener noreferrer"
             className="
